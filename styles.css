@@ -589,6 +589,7 @@ h3 {
   gap: 16px;
   max-width: 400px;
   margin: 28px auto;
+  justify-content: center;
 }
 .section--contact .btn--primary {
   background: var(--yellow);
@@ -669,6 +670,7 @@ h3 {
 
   .contact-ctas { flex-direction: row; max-width: 540px; }
   .btn--large { width: auto; flex: 1; }
+  .contact-ctas .btn--large:only-child { flex: 0 1 340px; }
 }
 
 /* ============================================================

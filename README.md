@@ -12,7 +12,6 @@ Open `script.js` and edit the `CONFIG` block at the top:
 const CONFIG = {
   consultantName: "Justin Hiller",
   phone: "555-123-4567",        // ← your real number
-  email: "justin@example.com",  // ← your real email
   serviceArea: "San Antonio, New Braunfels & surrounding counties",
   eligibleCounties: ["Bexar", "Comal", "Guadalupe", "Wilson"],
   programStatusNote: "...",     // ← update if grant round status changes
@@ -20,7 +19,7 @@ const CONFIG = {
 };
 ```
 
-Every phone link, email link, name, and status note on the site pulls from this block. Change it once, it updates everywhere.
+Every phone link, name, and status note on the site pulls from this block. Change it once, it updates everywhere.
 
 ### Section text
 
@@ -58,7 +57,7 @@ Updates: push to GitHub and Vercel auto-deploys.
 
 ### Domain
 
-For a genuinely independent service, use a dedicated domain (not an RDO subdomain) and a non-RDO email for the listed contact. Point the domain at Vercel via their Domains settings.
+For a genuinely independent service, use a dedicated domain (not an RDO subdomain) and point it at Vercel via their Domains settings. The site is phone-only right now; if you add an email contact later, use a non-RDO address.
 
 ## What this site is NOT
 
