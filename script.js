@@ -4,8 +4,8 @@
 // ============================================================
 const CONFIG = {
   consultantName: "Justin Hiller",
-  phone: "[JUSTIN_PHONE]",
-  email: "[JUSTIN_EMAIL]",
+  phone: "(713) 254-9148",
+  email: "jhiller@rdoequipment.com",
   serviceArea: "San Antonio, New Braunfels & surrounding counties",
   eligibleCounties: ["Bexar", "Comal", "Guadalupe", "Wilson"],
   programStatusNote:
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function populateConfig() {
   document.querySelectorAll("[data-phone]").forEach((el) => {
-    el.href = "tel:" + CONFIG.phone;
+    el.href = "tel:" + CONFIG.phone.replace(/[^\d+]/g, "");
     if (el.dataset.phone === "label") el.textContent = CONFIG.phone;
   });
   document.querySelectorAll("[data-email]").forEach((el) => {
@@ -192,7 +192,7 @@ function initChecker() {
       "</p>" +
       '<div class="checker-ctas">' +
       '<a href="tel:' +
-      CONFIG.phone +
+      CONFIG.phone.replace(/[^\d+]/g, "") +
       '" class="btn btn--primary">Call ' +
       CONFIG.consultantName +
       "</a>" +
